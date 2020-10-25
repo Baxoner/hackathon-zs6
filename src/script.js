@@ -13,7 +13,14 @@ function sprawdzEmail() {
 if (email.indexOf("@zs6sobieski.edu.pl") <= 1) {
         alert("Ten e-mail nie jest w domenie Sobieskiego :(");
         return false;
-    } else {
-        alert("Ankieta została przesłana");
     }
+    if(confirm("Twoja ankieta została przesłana.\nCzy chcesz przejść do listy postów?"))
+    {
+        window.location.href = 'http://www.google.com';
+        // return true;
+    }
+    else
+    {
+        return false;
+    } 
 }
