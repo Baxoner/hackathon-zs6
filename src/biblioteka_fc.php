@@ -40,10 +40,10 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="freelancer_c.html">Dołącz Do Freelancerów</a>
+                    <a class="nav-link" href="freelancer_c.php">Dołącz Do Freelancerów</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="biblioteka_fc.html">Biblioteka Fleelancerów</a>
+                    <a class="nav-link" href="biblioteka_fc.php">Biblioteka Fleelancerów</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="kontakt.html">Kontakt</a>
@@ -53,7 +53,24 @@
     </header>
     <main>
         <div class="container">
-            
+
+        <div class="row">
+
+<div class="col-md">
+    <div class="card">
+
+        <div class="card-body">
+          <h4 class="card-title"><p>Lista freelancerów</p></h4>
+        </div>
+       
+      </div> 
+      
+</div>
+
+</div>
+
+                    <?php include "get2.php"; ?>
+                   
 
                     </div>
     </main>
