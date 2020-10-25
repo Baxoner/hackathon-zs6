@@ -1,3 +1,26 @@
+<?php
+if (isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['description']) && isset($_POST['email']))
+{
+    include "db_connection.php";
+    $conn = OpenCon();
+    // Don't forget to properly escape your values before you send them to DB
+    // to prevent SQL injection attacks.
+    
+    $name = $_POST['name'];
+    $surname = $_POST['surname'];
+    $email = $_POST['email'];
+    $description = $_POST['description'];
+    $title = $_POST['title'];
+    
+    
+    $query = "INSERT INTO posty (name, surname, email, description,title)
+                VALUES ('{$name}','{$surname}','{$email}','{$description}','{$title}')";
+    
+    $conn->query($query);
+    $conn->close();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -30,15 +53,15 @@
 <body>
     <header>
     <nav class="navbar blue navbar-dark navbar-expand-md">
-       <a class="navbar-brand" href="index.html">
+       <a class="navbar-brand" href="index.php">
         Zbiór Freelancerów Sobiecha
        </a>
        <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-            <a class="nav-link" href="index.html">Strona główna</a>
+            <a class="nav-link" href="index.php">Strona główna</a>
         </li>
          <li class="nav-item">
-            <a class="nav-link" href="rejestracja.html">Stwórz post</a>
+            <a class="nav-link" href="rejestracja.php">Stwórz post</a>
         </li>
 
         <li class="nav-item">
@@ -58,37 +81,32 @@
         <div class="row">
             <div class="col-md">
                 <div class="card">
-                    <h4 class="card-header white-text blue">Dołącz do Freelancerów</h4>                        
+                    <h4 class="card-header white-text blue">Dodaj post</h4>                        
                     <div class="card-body">
-                        <form method="POST" id="formularz" onsubmit="return sprawdzEmail()">
+                        <form method="POST" action="rejestracja.php" id="formularz">
                             <div class="md-form">
-                                <input type="text" id="imie" name="imie" class="form-control"/>
+                                <input type="text" id="name" name="name" class="form-control"/>
                                 <label for="imie">Imię</label>
                             </div>
                             <div class="md-form">
-                                <input type="text" id="nazwisko" class="form-control"/>
-                                <label for="nazwisko">Nazwisko</label>
+                                <input type="text" id="surname" name="surname" class="form-control"/>
+                                <label for="surname">Nazwisko</label>
                             </div>
                             <div class="md-form">
                                 <input type="text" id="email" name="email" class="form-control"/>
                                 <label for="email">Adres e-mail</label>
                             </div>
                             <div class="md-form">
-                                <input type="text" id="zdolnosci" class="form-control"/>
-                                <label for="zdolnosci">Twoje zdolności</label>
+                                <input type="text" id="title" name="title" class="form-control"/>
+                                <label for="title">Tytuł Posta</label>
                             </div>
                             <div class="md-form">
-                                <input type="text" id="klasa" class="form-control"/>
-                                <label for="klasa">Twoja Klasa</label>
-                            </div>
-                            <div class="md-form">
-                                <p class="card-text">Awatar</p>
-                                <input type="file" id="awatar" class="form-control"/>
-                                <label for="awatar"></label>
+                                <input type="text" id="description" name="description" class="form-control"/>
+                                <label for="tresc">Treść posta</label>
                             </div>
                             <div class="d-flex justify-content-around">
                                 <input type="submit"
-                                    class="btn blue white-text" value="Zapisz się"/>
+                                    class="btn blue white-text" value="Opublikuj post!"/>
                             </div>
                         </form>
                     </div>

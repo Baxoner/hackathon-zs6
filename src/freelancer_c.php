@@ -2,7 +2,6 @@
 <html lang="pl">
 
 <head>
-
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css">
@@ -17,13 +16,15 @@
 
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css" type="text/css">
-    <link href="script.js" type="text/javascript">
+    <script type="text/javascript" src="script.js"></script>
     <meta name="author" content="Gracjan Karpiński, Bartosz Ratajczyk" />
     <meta name="robots" content="all" />
+
+
+
 </head>
 
 <body>
-
     <header>
         <nav class="navbar blue navbar-dark navbar-expand-md">
             <a class="navbar-brand" href="index.php">
@@ -52,30 +53,42 @@
     <main>
         <div class="container">
             <div class="row">
-
                 <div class="col-md">
                     <div class="card">
-
+                        <h4 class="card-header white-text blue">Dołącz do Freelancerów</h4>
                         <div class="card-body">
-                            <h4 class="card-title"><a>Kontakt do twórców!</a></h4>
-                            <p class="card-text">Jeśli znalazłeś jakiś błąd lub masz propozycję na rozwinięcie naszej
-                                strony, napisz do nas lub zadzwoń:
-                                <br><b>533 966 007 | gracjan.karpinski@zs6sobieski.edu.pl <br>
-                                    574 912 535 | bartosz.ratajczyk@zs6sobieski.edu.pl</b>
-                            </p>
+                            <form method="POST" action="freelancer_c.php" id="formularz2">
+                                <div class="md-form">
+                                    <input type="text" id="name2" name="name2" class="form-control" />
+                                    <label for="name2">Imię</label>
+                                </div>
+                                <div class="md-form">
+                                    <input type="text" id="surname2" name="surname2" class="form-control" />
+                                    <label for="surname2">Nazwisko</label>
+                                </div>
+                                <div class="md-form">
+                                    <input type="text" id="email2" name="email2" class="form-control" />
+                                    <label for="email2">Adres e-mail</label>
+                                </div>
+                                <div class="md-form">
+                                    <input type="text" id="perks2" name="perks2" class="form-control" />
+                                    <label for="perks2">Twoje zdolności</label>
+                                </div>
+                                <div class="md-form">
+                                    <input type="text" id="class2" name="class2" class="form-control" />
+                                    <label for="class2">Twoja Klasa</label>
+                                </div>
+
+                                <div class="d-flex justify-content-around">
+                                    <input type="submit" class="btn blue white-text" value="Zapisz się" />
+                                </div>
+                            </form>
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
-
         </div>
-
     </main>
-
 </body>
 
 </html>

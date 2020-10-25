@@ -1,8 +1,25 @@
+<?php
+include "db_connection.php";
+$conn = OpenCon();
+
+$name2 = $_POST['name2'];
+$surname2 = $_POST['surname2'];
+$email2 = $_POST['email2'];
+$perks2 = $_POST['perks2'];
+$class2 = $_POST['class2'];
+
+
+$query = "INSERT INTO freelancers (name2, surname2, email2, class2, perks2)
+            VALUES ('{$name2}','{$surname2}','{$email2}','{$class2}','{$perks2}')";
+
+$conn->query($query);
+$conn->close();
+
+?>
 <!DOCTYPE html>
 <html lang="pl">
 
 <head>
-
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css">
@@ -17,13 +34,15 @@
 
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css" type="text/css">
-    <link href="script.js" type="text/javascript">
+    <script type="text/javascript" src="script.js"></script>
     <meta name="author" content="Gracjan Karpiński, Bartosz Ratajczyk" />
     <meta name="robots" content="all" />
+
+
+
 </head>
 
 <body>
-
     <header>
         <nav class="navbar blue navbar-dark navbar-expand-md">
             <a class="navbar-brand" href="index.php">
@@ -51,31 +70,10 @@
     </header>
     <main>
         <div class="container">
-            <div class="row">
-
-                <div class="col-md">
-                    <div class="card">
-
-                        <div class="card-body">
-                            <h4 class="card-title"><a>Kontakt do twórców!</a></h4>
-                            <p class="card-text">Jeśli znalazłeś jakiś błąd lub masz propozycję na rozwinięcie naszej
-                                strony, napisz do nas lub zadzwoń:
-                                <br><b>533 966 007 | gracjan.karpinski@zs6sobieski.edu.pl <br>
-                                    574 912 535 | bartosz.ratajczyk@zs6sobieski.edu.pl</b>
-                            </p>
-                        </div>
-
+            
+        <?php include "get_fl.php"; ?>
                     </div>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
     </main>
-
 </body>
 
 </html>
