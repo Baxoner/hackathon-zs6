@@ -20,7 +20,7 @@
     <script type="text/javascript" src="script.js"></script>
     <meta name="author" content="Gracjan Karpiński, Bartosz Ratajczyk" />
     <meta name="robots" content="all" />
-
+    <title>Zbiór Freelancerów Sobiecha</title>
 
 
 </head>

@@ -18,7 +18,7 @@ while ($post = $result->fetch_assoc()):
     <div class="card">
  
                     <div class="card-body">
-                      <h4 class="card-title"><a><?php echo $post['name2'] ?> <?php echo $post['surname2']?> </a></h4>
+                      <h4 class="card-title"><p><?php echo $post['name2'] ?> <?php echo $post['surname2']?> </p></h4>
                       <p class="card-text">Klasa: <?php echo $post['class2'] ?> <br> Umiejętności: <?php echo $post['perks2'] ?>  
                       <br> email: <?php echo $post['email2'] ?>
 </p>

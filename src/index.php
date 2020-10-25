@@ -24,6 +24,7 @@
     <script type="text/javascript" src="script.js"></script>
 	<meta name="author" content="Gracjan Karpiński, Bartosz Ratajczyk"/>
 	<meta name = "robots" content="all"/>
+    <title>Zbiór Freelancerów Sobiecha</title>
 </head>
 <body>
     
@@ -60,7 +61,7 @@
                 <div class="card">
  
                     <div class="card-body">
-                      <h4 class="card-title"><a>Lista Postów</a></h4>
+                      <h4 class="card-title"><p>Lista Postów</p></h4>
                     </div>
                    
                   </div> 
