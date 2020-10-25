@@ -3,24 +3,38 @@ function sprawdzEmail2() {
     if (email2.indexOf("@zs6sobieski.edu.pl") <= 1) {
         alert("Ten e-mail nie jest w domenie Sobieskiego :(");
         return false;
-    } else {
-        alert("Ankieta została przesłana");
+    } 
+    else
+    {
+        if(confirm("Twoja ankieta została przesłana.\nCzy chcesz przejść do listy postów?"))
+        {
+            window.location.href = 'biblioteka_fc.php';
+            return false;
+        }
+        else
+        {
+            return true;
+        }
     }
 }
 
 function sprawdzEmail() {
     let email = document.forms["formularz"]["email"].value;
-if (email.indexOf("@zs6sobieski.edu.pl") <= 1) {
+    if (email.indexOf("@zs6sobieski.edu.pl") <= 1) {
         alert("Ten e-mail nie jest w domenie Sobieskiego :(");
         return false;
     }
-    if(confirm("Twoja ankieta została przesłana.\nCzy chcesz przejść do listy postów?"))
-    {
-        window.location.href = 'http://www.google.com';
-        // return true;
-    }
     else
     {
-        return false;
-    } 
+        if(confirm("Twoja ankieta została przesłana.\nCzy chcesz przejść do listy postów?"))
+        {
+            window.location.href = 'index.php';
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+    
 }
