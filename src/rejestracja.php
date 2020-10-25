@@ -85,23 +85,23 @@ if (isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['descripti
                     <div class="card-body">
                         <form method="POST" action="rejestracja.php" id="formularz" onsubmit="return sprawdzEmail()">
                             <div class="md-form">
-                                <input type="text" id="name" name="name" class="form-control"/>
+                                <input type="text" id="name" name="name" class="form-control" required="required" maxlength="15"/>
                                 <label for="imie">Imię</label>
                             </div>
                             <div class="md-form">
-                                <input type="text" id="surname" name="surname" class="form-control"/>
+                                <input type="text" id="surname" name="surname" class="form-control" required="required" maxlength="30"/>
                                 <label for="surname">Nazwisko</label>
                             </div>
                             <div class="md-form">
-                                <input type="text" id="email" name="email" class="form-control"/>
+                                <input type="text" id="email" name="email" class="form-control" required="required"/>
                                 <label for="email">Adres e-mail</label>
                             </div>
                             <div class="md-form">
-                                <input type="text" id="title" name="title" class="form-control"/>
+                                <input type="text" id="title" name="title" class="form-control" required="required" maxlength="20"/>
                                 <label for="title">Tytuł Posta</label>
                             </div>
                             <div class="md-form">
-                                <input type="text" id="description" name="description" class="form-control"/>
+                                <input type="text" id="description" name="description" class="form-control" required="required"/>
                                 <label for="tresc">Treść posta</label>
                             </div>
                             <div class="d-flex justify-content-around">
