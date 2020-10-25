@@ -1,21 +1,4 @@
-<?php
-include "db_connection.php";
-$conn = OpenCon();
 
-$name2 = $_POST['name2'];
-$surname2 = $_POST['surname2'];
-$email2 = $_POST['email2'];
-$perks2 = $_POST['perks2'];
-$class2 = $_POST['class2'];
-
-
-$query = "INSERT INTO freelancers (name2, surname2, email2, class2, perks2)
-            VALUES ('{$name2}','{$surname2}','{$email2}','{$class2}','{$perks2}')";
-
-$conn->query($query);
-$conn->close();
-
-?>
 <!DOCTYPE html>
 <html lang="pl">
 
@@ -71,7 +54,7 @@ $conn->close();
     <main>
         <div class="container">
             
-        <?php include "get_fl.php"; ?>
+
                     </div>
     </main>
 </body>

@@ -83,7 +83,7 @@ if (isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['descripti
                 <div class="card">
                     <h4 class="card-header white-text blue">Dodaj post</h4>                        
                     <div class="card-body">
-                        <form method="POST" action="rejestracja.php" id="formularz">
+                        <form method="POST" action="rejestracja.php" id="formularz" onsubmit="return sprawdzEmail()">
                             <div class="md-form">
                                 <input type="text" id="name" name="name" class="form-control"/>
                                 <label for="imie">Imię</label>

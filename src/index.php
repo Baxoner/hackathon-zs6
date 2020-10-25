@@ -21,7 +21,7 @@
 
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css" type="text/css">
-    <link href="script.js" type="text/javascript">
+    <script type="text/javascript" src="script.js"></script>
 	<meta name="author" content="Gracjan Karpiński, Bartosz Ratajczyk"/>
 	<meta name = "robots" content="all"/>
 </head>
