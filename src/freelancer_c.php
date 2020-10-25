@@ -1,3 +1,26 @@
+<?php
+if (isset($_POST['name2']) && isset($_POST['surname2']) && isset($_POST['perks2']) && isset($_POST['email2']) && isset($_POST['class2']))
+{
+    include "db_connection2.php";
+    $conn = OpenCon();
+    // Don't forget to properly escape your values before you send them to DB
+    // to prevent SQL injection attacks.
+    
+    $name2 = $_POST['name2'];
+    $surname2 = $_POST['surname2'];
+    $email2 = $_POST['email2'];
+    $perks2 = $_POST['perks2'];
+    $class2 = $_POST['class2'];
+    
+    
+    $query = "INSERT INTO freelancers (name2, surname2, email2, perks2, class2)
+                VALUES ('{$name2}','{$surname2}','{$email2}','{$perks2}','{$class2}')";
+    
+    $conn->query($query);
+    $conn->close();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="pl">
 
@@ -57,7 +80,7 @@
                     <div class="card">
                         <h4 class="card-header white-text blue">Dołącz do Freelancerów</h4>
                         <div class="card-body">
-                            <form method="POST" action="freelancer_c.php" id="formularz2" onsubmit="return sprawdzEmail()" >
+                            <form method="POST" action="freelancer_c.php" id="formularz2" onsubmit="return sprawdzEmail2()" >
                                 <div class="md-form">
                                     <input type="text" id="name2" name="name2" class="form-control" required="required" />
                                     <label for="name2">Imię</label>
@@ -70,48 +93,16 @@
                                     <input type="text" id="email2" name="email2" class="form-control" required="required" />
                                     <label for="email2">Adres e-mail</label>
                                 </div>
-                                <div class="md-form">
-
-                                 
-                                </div>
                                 
                                 <div class="md-form">
-                                    <input type="text" id="class2" name="class2" class="form-control" required="required" />
+                                    <input type="text" id="class2" name="class2" class="form-control" required="required" placeholder="" />
                                     <label for="class2">Twoja Klasa</label>
                                 </div>
                                 
                                 <div class="md-form">
-                                <select name="list_1" size="8" multiple="multiple" class="form-control" required="required"> 
-<optgroup label="Grafika">
-<option>Ulotki/Plakaty</option>
-<option>Loga</option>
-</optgroup>
-<optgroup label="Programowanie">
-<option>C++</option>
-<option>C#</option>
-<option>JavaScript</option>
-</optgroup>
-<optgroup label="Tworzenie stron www i bazy danych">
-<option>HTML</option>
-<option>CSS</option>
-<option>MySQL</option>
-<option>PHP</option>
-</optgroup>
-<optgroup label="Wideo i Audio">
-<option>Montaż wideo</option>
-<option>Obróbka audio</option>
-</optgroup>
-<optgroup label="Pomoc Techniczna">
-<option>Obsługa sprzętu szkolnego</option>
-</optgroup>
-<optgroup label="Muzyka">
-<option>Gra na pianinie</option>
-<option>Gra na gitarze</option>
-<option>Gra na perkusji</option>
-<option>Śpiew</option>
-<option>Gra na innym instrumencie</option>
-</optgroup>
-</select>
+                                <input type="text" id="perks2" name="perks2" class="form-control" required="required" />
+                                    <label for="perks">Twoje umiejętności (np. programowanie, grafika)</label>
+
 
 </div>
 

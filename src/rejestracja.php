@@ -68,7 +68,7 @@ if (isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['descripti
             <a class="nav-link" href="freelancer_c.php">Dołącz Do Freelancerów</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="biblioteka_fc.html">Biblioteka Fleelancerów</a>
+            <a class="nav-link" href="biblioteka_fc.php">Biblioteka Fleelancerów</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="kontakt.html">Kontakt</a>

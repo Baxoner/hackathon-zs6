@@ -53,23 +53,25 @@
     </header>
     <main>
         <div class="container">
-        <div class="row"> 
-        <div class="col-md">
+
+        <div class="row">
+
+<div class="col-md">
     <div class="card">
-                    
-                    <div class="card-body">
-                      <h4 class="card-title"><a>Gracjan Karpiński</a></h4>
-                      <p class="card-text"><br>
-                      </p>
-                      <p class="card-text">Informacje o użytkowniku: <br> E-mail:gracjan.karpinski@zs6sobieski.edu.ppl <br> Zdolności: Montaż filmów Premiere Pro, Podstawy HTML, Podstawy Photoshop </p>
-                      <!--<a href="#" class="btn btn-primary">Zgłoś się</a> a-->
-                    </div>
-                   
-                  </div> 
+
+        <div class="card-body">
+          <h4 class="card-title"><p>Lista freelancerów</p></h4>
+        </div>
+       
+      </div> 
       
 </div>
+
 </div>
-</div>
+
+                    <?php include "get2.php"; ?>
+                   
+
                     </div>
     </main>
 </body>
