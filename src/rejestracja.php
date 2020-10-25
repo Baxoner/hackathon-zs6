@@ -65,7 +65,7 @@ if (isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['descripti
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" href="freelancer_c.html">Dołącz Do Freelancerów</a>
+            <a class="nav-link" href="freelancer_c.php">Dołącz Do Freelancerów</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="biblioteka_fc.html">Biblioteka Fleelancerów</a>
@@ -97,7 +97,7 @@ if (isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['descripti
                                 <label for="email">Adres e-mail</label>
                             </div>
                             <div class="md-form">
-                                <input type="text" id="title" name="title" class="form-control" required="required" maxlength="20"/>
+                                <input type="text" id="title" name="title" class="form-control" required="required" maxlength="75"/>
                                 <label for="title">Tytuł Posta</label>
                             </div>
                             <div class="md-form">

@@ -40,10 +40,10 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="freelancer_c.html">Dołącz Do Freelancerów</a>
+                    <a class="nav-link" href="freelancer_c.php">Dołącz Do Freelancerów</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="biblioteka_fc.html">Biblioteka Fleelancerów</a>
+                    <a class="nav-link" href="biblioteka_fc.php">Biblioteka Fleelancerów</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="kontakt.html">Kontakt</a>
@@ -53,8 +53,23 @@
     </header>
     <main>
         <div class="container">
-            
-
+        <div class="row"> 
+        <div class="col-md">
+    <div class="card">
+                    
+                    <div class="card-body">
+                      <h4 class="card-title"><a>Gracjan Karpiński</a></h4>
+                      <p class="card-text"><br>
+                      </p>
+                      <p class="card-text">Informacje o użytkowniku: <br> E-mail:gracjan.karpinski@zs6sobieski.edu.ppl <br> Zdolności: Montaż filmów Premiere Pro, Podstawy HTML, Podstawy Photoshop </p>
+                      <!--<a href="#" class="btn btn-primary">Zgłoś się</a> a-->
+                    </div>
+                   
+                  </div> 
+      
+</div>
+</div>
+</div>
                     </div>
     </main>
 </body>
